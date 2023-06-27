@@ -85,3 +85,24 @@ nest g controller <controller-name>
 nest g service <service-name>
 ```
 
+## Add docker
+
+Create a docker-compose.yml file
+
+## Add a Database, install Prisma
+
+Install prisma packages
+```cmd
+yarn add prisma@lates
+yarn add @prisma/client
+```
+
+## Init prisma
+
+This creates an .env file with some helpfull configs,
+and a ```/prisma``` folder whee the schema is defined.
+```cmd
+npx prisma init
+```
+
+
