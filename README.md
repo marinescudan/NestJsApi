@@ -56,5 +56,32 @@ Once installed, you can invoke CLI commands directly from your OS command line t
 nest --help
 ```
 
+## Generating the first Nest JS app
 
+```cmd
+nest new <app-name>
+```
+
+
+## Generating a module
+
+```cmd
+nest g module <module-name>
+```
+
+
+
+## Generating a controller
+
+```cmd
+nest g controller <controller-name>
+```
+
+
+
+## Generating a service
+
+```cmd
+nest g service <service-name>
+```
 
