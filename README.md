@@ -88,6 +88,53 @@ nest g service <service-name>
 ## Add docker
 
 Create a docker-compose.yml file
+```yml
+# docker-compose.yml
+
+version: '3.8'
+services:
+  dev-db:
+    image: postgres:13
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nest
+    networks:
+      - freecodecamp
+networks:
+  freecodecamp:
+    name: freecodecamp
+
+```
+
+Start the docker container using command: ```docker compose up <name-of-db> -d```
+
+```cmd
+docker compose up dev-db -d
+```
+
+```cmd
+docker ps
+```
+
+View docker logs
+```cmd
+docker logs 
+```
+
+Remove docker container using command: ```docker compose rm <db-name> [-s -f -v]```, see options below.
+```cmd
+Options:
+  --dry-run   Execute command in dry run mode
+  -f, --force     Don't ask to confirm removal
+  -s, --stop      Stop the containers, if required, before removing
+  -v, --volumes   Remove any anonymous volumes attached to containers
+
+
+>docker compose rm dev-db -s -f -v
+```
 
 ## Add a Database, install Prisma
 
@@ -105,4 +152,43 @@ and a ```/prisma``` folder whee the schema is defined.
 npx prisma init
 ```
 
+## Start Prisma Studio
 
+```cmd
+npx prisma studio
+```
+
+# Creare AUTH API
+
+## Validate request
+
+To validate you can use Nest pipes that validate datatypes or classes, to do so install ```class-validator``` and ``` class-transformer``` packages.
+
+```cmd
+yarn add class-validator class-transformer
+```
+
+## Encript the password
+
+There are many packages you can use to encript passwords one is ```argon2```
+
+```cmd
+yarn add argon2
+```
+
+
+# Use CONFIG module
+
+Instal the nestjs/config module to use it in the project
+```cmd
+yarn add @nestjs/config
+```
+
+
+# Use JWT with the Passport library
+
+```cmd
+ yarn add @nestjs/passport passport
+ yarn add @nestjs/jwt passport-jwt
+ yarn add -D @types/passport-jwt
+```
