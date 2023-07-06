@@ -43,7 +43,7 @@ npm -v
 node -v
 ```
 
-Second you need to intsll [NEXT CLI](https://docs.nestjs.com/cli/overview). 
+Second you need to install [NEST CLI](https://docs.nestjs.com/cli/overview). 
 
 ```cmd
 npm install -g @nestjs/cli
