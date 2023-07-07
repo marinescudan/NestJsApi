@@ -205,3 +205,9 @@ Install [PactumJS](https://pactumjs.github.io/)
 ```cmd
  yarn add -D pactum
 ```
+
+Install [dotenv](https://www.npmjs.com/package/dotenv)
+
+```cmd
+ yarn add -D dotenv
+```
