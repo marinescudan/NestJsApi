@@ -113,6 +113,7 @@ Start the docker container using command: ```docker compose up <name-of-db> -d``
 
 ```cmd
 docker compose up dev-db -d
+docker compose up test-db -d
 ```
 
 ```cmd
@@ -133,7 +134,8 @@ Options:
   -v, --volumes   Remove any anonymous volumes attached to containers
 
 
->docker compose rm dev-db -s -f -v
+docker compose rm dev-db -s -f -v
+docker compose rm test-db -s -f -v
 ```
 
 ## Add a Database, install Prisma
@@ -191,4 +193,15 @@ yarn add @nestjs/config
  yarn add @nestjs/passport passport
  yarn add @nestjs/jwt passport-jwt
  yarn add -D @types/passport-jwt
+```
+
+
+# E2E testing
+
+## Pactum library
+
+Install [PactumJS](https://pactumjs.github.io/)
+
+```cmd
+ yarn add -D pactum
 ```
